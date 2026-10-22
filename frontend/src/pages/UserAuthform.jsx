@@ -3,6 +3,9 @@ import Inputbox from '../Components/Inputbox'
 
 
 function UserAuthform({ type }) {
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+    }
     return (
         <section className='h-cover flex justify-center items-center '>
             <form action="" className='w-[80%] max-w-100'>
@@ -30,6 +33,17 @@ function UserAuthform({ type }) {
                     name='password'
                     placeholder='password'
                 />
+
+                <button 
+                className='btn-dark center mt-14'
+                type='submit'
+                onClick={handleSubmit}
+                >
+                    {
+                        type.replace('-' , ' ')
+                    }
+
+                </button>
 
             </form>
         </section>
