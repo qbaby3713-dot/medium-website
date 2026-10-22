@@ -11,24 +11,24 @@ function UserAuthform({ type }) {
 
                 {type != 'sign in '?
                     < Inputbox 
-                        type="email"
-                        name='Full name'
-                        placeholder='Full name'
+                        type="full name"
+                        name='full name'
+                        placeholder='full name'
             />
             :''
             }
 
                 <Inputbox
                     type="email"
-                    name='Full name'
-                    placeholder='Full name'
+                    name='email'
+                    placeholder='email'
                     icon='fi-rr-user'
                 />
 
                 <Inputbox
-                    type="email"
-                    name='Full name'
-                    placeholder='Full name'
+                    type="password"
+                    name='password'
+                    placeholder='password'
                 />
 
             </form>

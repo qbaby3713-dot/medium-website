@@ -1,11 +1,12 @@
 import React from 'react'
 import Logo from '../images/logo.png'
-import { Search , FilePenLine} from 'lucide-react'
-import { Outlet } from 'react-router-dom'
+import { Search , FilePenLine } from 'lucide-react'
+import { Outlet , Link } from 'react-router-dom'
 
 
 function Navbar() {
   return (
+    <>
     <div className='navbar gap-4 justify-between font-gelasio'>
       <div className='flex' >
         <img className='h-10  ' src={Logo} alt="" />
@@ -23,13 +24,14 @@ function Navbar() {
         className='text-2xl'/>
         Write
         </button>
-        <button className='border bg-black text-amber-50 rounded-4xl p-3 w-30 text-xl  hover:bg-gray-800'>Sign In</button>
-        <button className=' w-30 bg-gray-100 text-xl hover:bg-gray-300 rounded-full p-3 hidden md:block'>Sign Up</button>
+        <Link to='/signin' className='border bg-black text-amber-50 rounded-4xl p-3 w-30 text-xl  hover:bg-gray-800'>Sign In</Link>
+        <Link to='/signup' className=' w-30 bg-gray-100 text-xl hover:bg-gray-300 rounded-full p-3 hidden md:block'>Sign Up</Link>
       </div>
 
-      <Outlet/>
+      
     </div>
-    
+    <Outlet/>
+    </>
   )
 }
 
